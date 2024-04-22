@@ -13,7 +13,7 @@ public class Participante {
 		return nombre;
 	}
 	public String obtenerTelefono(){
-		return telefono.obtenerNombre();
+		return telefono.obtenerNumero();
 	}
 	public String obtenerRegion(){
 		return region.obtenerNombre();

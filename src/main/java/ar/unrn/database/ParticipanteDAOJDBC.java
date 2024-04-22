@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ParticipanteDAOJDBC implements ParticipanteDAO {
-	String url = "jdbc:mysql://localhost:3306/sistema_de_concursos";
+	String url = "jdbc:mysql://localhost:3306/registroparticipantetp4ejercicio1objetos2";
 	String username = "LeonelAriel";
 
 	String password = "villa2015";
@@ -24,16 +24,11 @@ public class ParticipanteDAOJDBC implements ParticipanteDAO {
 			st.setString(2, participante.obtenerTelefono());
 			st.setString(3, participante.obtenerRegion());
 			st.executeUpdate();
+			dbConn.close();
+			st.close();
 		}
 		catch(SQLException e){
 			throw new RuntimeException(e.getMessage());
-		}
-		finally {
-			try {
-				st.close();
-			} catch (SQLException e) {
-				throw new RuntimeException(e);
-			}
 		}
 	}
 }

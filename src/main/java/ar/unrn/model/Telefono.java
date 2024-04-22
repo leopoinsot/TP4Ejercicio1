@@ -10,7 +10,7 @@ public class Telefono {
 		verificarNumero(numero);
 	}
 
-	public String obtenerNombre(){
+	public String obtenerNumero(){
 		return numero;
 	}
 
