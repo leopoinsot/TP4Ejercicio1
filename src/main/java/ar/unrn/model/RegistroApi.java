@@ -7,7 +7,7 @@ public class RegistroApi implements ServicioRegistros {
 		this.participanteDAO = participanteDAO;
 	}
 	@Override
-	public void InscribirParticipante(String nombre, String numeroTelefono, String nombreRegion) throws RuntimeException {
+	public void InscribirParticipante(String nombre, String numeroTelefono, String nombreRegion) {
 		try { //debo atrapar la excepcion lanzada para poder testear
 			var region = new Region(nombreRegion);
 			var telefono = new Telefono(numeroTelefono);
